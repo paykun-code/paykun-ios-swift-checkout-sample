@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014396D721C9149200DF0754 /* PayKun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014396D521C9148A00DF0754 /* PayKun.framework */; };
+		014396D821C9149200DF0754 /* PayKun.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 014396D521C9148A00DF0754 /* PayKun.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0177EE9B217DE4C0007BF559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0177EE9A217DE4C0007BF559 /* AppDelegate.swift */; };
 		0177EE9D217DE4C0007BF559 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0177EE9C217DE4C0007BF559 /* ViewController.swift */; };
 		0177EEA0217DE4C0007BF559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0177EE9E217DE4C0007BF559 /* Main.storyboard */; };
 		0177EEA2217DE4C9007BF559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0177EEA1217DE4C9007BF559 /* Assets.xcassets */; };
 		0177EEA5217DE4C9007BF559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0177EEA3217DE4C9007BF559 /* LaunchScreen.storyboard */; };
-		01C6E0C221AC19AE00507F89 /* PayKun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C6E0C021AC19A700507F89 /* PayKun.framework */; };
-		01C6E0C321AC19AE00507F89 /* PayKun.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01C6E0C021AC19A700507F89 /* PayKun.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +23,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				01C6E0C321AC19AE00507F89 /* PayKun.framework in Embed Frameworks */,
+				014396D821C9149200DF0754 /* PayKun.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		014396D521C9148A00DF0754 /* PayKun.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayKun.framework; sourceTree = "<group>"; };
 		0177EE97217DE4C0007BF559 /* PaykunSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaykunSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0177EE9A217DE4C0007BF559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0177EE9C217DE4C0007BF559 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		0177EEA1217DE4C9007BF559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0177EEA4217DE4C9007BF559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0177EEA6217DE4C9007BF559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01C6E0C021AC19A700507F89 /* PayKun.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayKun.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01C6E0C221AC19AE00507F89 /* PayKun.framework in Frameworks */,
+				014396D721C9149200DF0754 /* PayKun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +72,7 @@
 		0177EE99217DE4C0007BF559 /* PaykunSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				01C6E0C021AC19A700507F89 /* PayKun.framework */,
+				014396D521C9148A00DF0754 /* PayKun.framework */,
 				0177EE9A217DE4C0007BF559 /* AppDelegate.swift */,
 				0177EE9C217DE4C0007BF559 /* ViewController.swift */,
 				0177EE9E217DE4C0007BF559 /* Main.storyboard */,
