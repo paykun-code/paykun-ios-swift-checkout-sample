@@ -20,21 +20,21 @@ class ViewController: UIViewController,PaykunCheckoutDelegate {
             orderId = orderId + ("\(arc4random_uniform(10))")
         }
     
-        objPaykun.checkout(withCustomerName: "Paul", customerEmail: "example@mail.com", customerMobile: "", productName: "Stationery", orderNo: orderId, amount: "1", viewController: self)
+        objPaykun.checkout(withCustomerName: "Paul", customerEmail: "example@mail.com", customerMobile: "", productName: "Stationery", orderNo: orderId, amount: "10", viewController: self)
     }
     
     // MARK: PaykunCheckoutDelegate
-    func onPaymentFailed(_ responce: [AnyHashable : Any]!) {
+    func onPaymentFailed(_ responce: [AnyHashable : Any]) {
         
-        let requestId = responce!["req_id"] as! String
+        let requestId = responce["req_id"] as! String
         let alert = UIAlertController(title: "Oops", message: "fail with req_id:" + requestId, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
-    func onPaymentSucceed(_ responce: [AnyHashable : Any]!) {
+    func onPaymentSucceed(_ responce: [AnyHashable : Any]) {
         
-        let requestId = responce!["req_id"] as! String
+        let requestId = responce["req_id"] as! String
         let alert = UIAlertController(title: "Success", message: "success with req_id:" + requestId, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
