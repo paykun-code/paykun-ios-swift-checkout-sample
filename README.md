@@ -51,7 +51,7 @@ func showPaymentCheckout(){
 
 Success
 ```
-func onPaymentSucceed(_ responce: [AnyHashable : Any]!) {
+func onPaymentSucceed(_ responce: [AnyHashable : Any]) {
     let msg = responce!["req_id"] as! String
     let alert = UIAlertView(title: “Success”, message: "fail with req_id:"+msg, delegate: nil, cancelButtonTitle: "Okay")
     alert.show()
@@ -60,7 +60,7 @@ func onPaymentSucceed(_ responce: [AnyHashable : Any]!) {
 
 Fail
 ```
-func onPaymentFailed(_ responce: [AnyHashable : Any]!) {
+func onPaymentFailed(_ responce: [AnyHashable : Any]) {
     let msg = responce!["req_id"] as! String
     let alert = UIAlertView(title: “Error”, message: "fail with req_id:"+msg, delegate: nil, cancelButtonTitle: "Okay")
     alert.show()
