@@ -14,6 +14,8 @@
 		0177EEA5217DE4C9007BF559 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0177EEA3217DE4C9007BF559 /* LaunchScreen.storyboard */; };
 		01E55267224CD0390099B5B3 /* PayKun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E55265224CD02E0099B5B3 /* PayKun.framework */; };
 		01E55268224CD0390099B5B3 /* PayKun.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01E55265224CD02E0099B5B3 /* PayKun.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01E5526B224CD2E90099B5B3 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 01E55269224CD2E80099B5B3 /* LICENSE */; };
+		01E5526C224CD2E90099B5B3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 01E5526A224CD2E80099B5B3 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +41,8 @@
 		0177EEA4217DE4C9007BF559 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0177EEA6217DE4C9007BF559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01E55265224CD02E0099B5B3 /* PayKun.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayKun.framework; sourceTree = "<group>"; };
+		01E55269224CD2E80099B5B3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		01E5526A224CD2E80099B5B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 		0177EE99217DE4C0007BF559 /* PaykunSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				01E55269224CD2E80099B5B3 /* LICENSE */,
+				01E5526A224CD2E80099B5B3 /* README.md */,
 				01E55265224CD02E0099B5B3 /* PayKun.framework */,
 				0177EE9A217DE4C0007BF559 /* AppDelegate.swift */,
 				0177EE9C217DE4C0007BF559 /* ViewController.swift */,
@@ -145,6 +151,8 @@
 			files = (
 				0177EEA5217DE4C9007BF559 /* LaunchScreen.storyboard in Resources */,
 				0177EEA2217DE4C9007BF559 /* Assets.xcassets in Resources */,
+				01E5526C224CD2E90099B5B3 /* README.md in Resources */,
+				01E5526B224CD2E90099B5B3 /* LICENSE in Resources */,
 				0177EEA0217DE4C0007BF559 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
