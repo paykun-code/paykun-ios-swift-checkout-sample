@@ -9,7 +9,8 @@ class ViewController: UIViewController,PaykunCheckoutDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        objPaykun = PaykunCheckout.init(key: "297E1CBBD172DA76325163469CB8D1EA", merchantId: "357851063624213", isLive: false, andDelegate: self)
+        // initialization method
+        objPaykun = PaykunCheckout.init(key:"YourApiKey", merchantId:"YourMerchantId", isLive:true, andDelegate: self)
     }
     
     // MARK: IBAction Method
@@ -20,7 +21,8 @@ class ViewController: UIViewController,PaykunCheckoutDelegate {
             orderId = orderId + ("\(arc4random_uniform(10))")
         }
     
-        objPaykun.checkout(withCustomerName: "Paul", customerEmail: "example@mail.com", customerMobile: "", productName: "Stationery", orderNo: orderId, amount: "10", viewController: self)
+        // open checkout method
+        objPaykun.checkout(withCustomerName:"Paul", customerEmail:"example@mail.com", customerMobile:"", productName:"Stationery", orderNo:orderId, amount: "10", viewController:self)
     }
     
     // MARK: PaykunCheckoutDelegate
@@ -30,6 +32,11 @@ class ViewController: UIViewController,PaykunCheckoutDelegate {
         let alert = UIAlertController(title: "Oops", message: "fail with req_id:" + requestId, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+        
+        // get transaction detail
+        objPaykun.getTransactionByPaymentId(requestId, block: { responce in
+            print("responce: \(responce)")
+        })
     }
     
     func onPaymentSucceed(_ responce: [AnyHashable : Any]) {
@@ -38,6 +45,11 @@ class ViewController: UIViewController,PaykunCheckoutDelegate {
         let alert = UIAlertController(title: "Success", message: "success with req_id:" + requestId, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+        
+        // get transaction detail
+        objPaykun.getTransactionByPaymentId(requestId, block: { responce in
+            print("responce: \(responce)")
+        })
     }
 }
 

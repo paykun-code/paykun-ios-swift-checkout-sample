@@ -4,7 +4,23 @@ The iOS SDK library lets you seamlessly integrate the entire payment ecosystem i
 
 ## Features | Doc
 
-### Step 1: Importing the Library
+### Step 1: Get Access Token (For Device)
+
+•    Device access token is bounded with the application package name; hence one Access Token per Application will be granted. 
+
+•    You can generate/regenerate Access token and API KEY by logging into your PayKun Admin panel.
+
+•    Go to: Settings => Security => Device API KEY Here you will find generate button, if you have not generated any Device Access Token before.
+
+•    You must provide the package name of your application to generate the access token.
+
+•    If you have ever generated any Access Token, you will see Package Name with Creation date of it. You won’t be able to retrieve any old Access Token (Due to security concerns), that’s why we have provided regenerate option.
+
+```
+Note: Once you regenerate API KEY, your old API KEY will immediately stop working. So be double sure and cautious before regenerating API KEY.
+```
+
+### Step 2: Importing the Library
 
 Follow the instruction given below to import the SDK library to your Swift or Objective-C project :
 
@@ -15,8 +31,7 @@ Follow the instruction given below to import the SDK library to your Swift or Ob
 5.    Click Add.
 6.    Navigate to Target settings > General and add the Paykun.framework in both Embeded Binaries and Linked Frameworks and Libraries.
 
-
-### Step 2: Initialize the Paykun SDK
+### Step 3: Initialize the Paykun SDK
 
 To initialize the Paykun SDK, you will need the following:
 
@@ -24,36 +39,39 @@ To initialize the Paykun SDK, you will need the following:
 
 •    Merchant Id
 
+•    isLive (true for live environment and false for test environment)
+
 ```
 import Paykun
 
 class ViewController: UIViewController, PaykunCheckoutDelegate {
 
-var objPaykun: PaykunCheckout!
+    var objPaykun: PaykunCheckout!
 
-override func viewDidLoad() {
-    super.viewDidLoad()
-    objPaykun = PaykunCheckout.init(key: paykunTestKey, merchantId: merchantId, isLive: true,andDelegate: self)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        objPaykun = PaykunCheckout.init(key:"YourApiKey", merchantId:"YourMerchantId", isLive:true, andDelegate:self)
+    }
 }
 ```
 
-### Step 3: Pass Payment Parameter and Display Checkout Form
+### Step 4: Pass Payment Parameter and Display Checkout Form
 
 Add the following code to your ViewController or where ever you want to initialize payments:
 
 ```
 func showPaymentCheckout(){
-    objPaykun.checkout(withCustomerName: “name”, customerEmail: “email”, customerMobile: “mobile”, productName: “product”, orderNo: “order”, amount: “amount”, viewController: self);
+    objPaykun.checkout(withCustomerName:“name”, customerEmail:“email”, customerMobile:“mobile”, productName:“product”, orderNo:“order”, amount:“amount”, viewController:self);
 }
 ```
 
-### Step 4: Handle Success and Fail Event
+### Step 5: Handle Success and Fail Event
 
 Success
 ```
 func onPaymentSucceed(_ responce: [AnyHashable : Any]) {
     let msg = responce!["req_id"] as! String
-    let alert = UIAlertView(title: “Success”, message: "fail with req_id:"+msg, delegate: nil, cancelButtonTitle: "Okay")
+    let alert = UIAlertView(title:“Success”, message:"fail with req_id:"+msg, delegate:nil, cancelButtonTitle:"Okay")
     alert.show()
 }
 ```
@@ -62,14 +80,19 @@ Fail
 ```
 func onPaymentFailed(_ responce: [AnyHashable : Any]) {
     let msg = responce!["req_id"] as! String
-    let alert = UIAlertView(title: “Error”, message: "fail with req_id:"+msg, delegate: nil, cancelButtonTitle: "Okay")
+    let alert = UIAlertView(title:“Error”, message:"fail with req_id:"+msg, delegate:nil, cancelButtonTitle:"Okay")
     alert.show()
 }
 ```
 
+### Get Transaction Details
+
+```
+objPaykun.getTransactionByPaymentId("1234", block: { responce in
+    print("responce: \(responce)")
+})
+```
+
 
 ### For further help, see our [Documentation](https://paykun.com/docs) or [Contact Us](https://paykun.com/contact)
-
-
-
 
