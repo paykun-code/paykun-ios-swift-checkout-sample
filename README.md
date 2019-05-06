@@ -70,25 +70,21 @@ func showPaymentCheckout(){
 Success
 ```
 func onPaymentSucceed(_ responce: [AnyHashable : Any]) {
-    let msg = responce!["req_id"] as! String
-    let alert = UIAlertView(title:“Success”, message:"fail with req_id:"+msg, delegate:nil, cancelButtonTitle:"Okay")
-    alert.show()
+    print("responce: \(responce)")
 }
 ```
 
 Fail
 ```
 func onPaymentFailed(_ responce: [AnyHashable : Any]) {
-    let msg = responce!["req_id"] as! String
-    let alert = UIAlertView(title:“Error”, message:"fail with req_id:"+msg, delegate:nil, cancelButtonTitle:"Okay")
-    alert.show()
+    print("responce: \(responce)")
 }
 ```
 
 ### Get Transaction Details
 
 ```
-objPaykun.getTransactionByPaymentId("1234", block: { responce in
+objPaykun.getTransactionByPaymentId("PaymentId", block: { responce in
     print("responce: \(responce)")
 })
 ```

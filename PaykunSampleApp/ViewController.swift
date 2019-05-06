@@ -28,10 +28,7 @@ class ViewController: UIViewController,PaykunCheckoutDelegate {
     // MARK: PaykunCheckoutDelegate
     func onPaymentFailed(_ responce: [AnyHashable : Any]) {
         
-        let requestId = responce["req_id"] as! String
-        let alert = UIAlertController(title: "Oops", message: "fail with req_id:" + requestId, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let requestId = responce["transactionId"] as! String
         
         // get transaction detail
         objPaykun.getTransactionByPaymentId(requestId, block: { responce in
@@ -41,10 +38,7 @@ class ViewController: UIViewController,PaykunCheckoutDelegate {
     
     func onPaymentSucceed(_ responce: [AnyHashable : Any]) {
         
-        let requestId = responce["req_id"] as! String
-        let alert = UIAlertController(title: "Success", message: "success with req_id:" + requestId, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let requestId = responce["transactionId"] as! String
         
         // get transaction detail
         objPaykun.getTransactionByPaymentId(requestId, block: { responce in
