@@ -1,6 +1,8 @@
 # iOS Checkout SDK
 
-The iOS SDK library lets you seamlessly integrate the entire payment ecosystem in your iOS application and start accepting payments with Paykun.
+The iOS SDK library lets you seamlessly integrate the entire payment ecosystem in your iOS application and start accepting payments with [PayKun](https://paykun.com)
+
+This framework only supports iOS version 9.0 and later
 
 ## Features | Doc
 
@@ -41,7 +43,7 @@ To initialize the Paykun SDK, you will need the following:
 
 •    isLive (true for live environment and false for test environment)
 
-```
+```swift
 import Paykun
 
 class ViewController: UIViewController, PaykunCheckoutDelegate {
@@ -50,7 +52,7 @@ class ViewController: UIViewController, PaykunCheckoutDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        objPaykun = PaykunCheckout.init(key:"YourApiKey", merchantId:"YourMerchantId", isLive:true, andDelegate:self)
+        objPaykun = PaykunCheckout.init(key: "YourApiKey", merchantId: "YourMerchantId", isLive: true, andDelegate: self)
     }
 }
 ```
@@ -59,23 +61,23 @@ class ViewController: UIViewController, PaykunCheckoutDelegate {
 
 Add the following code to your ViewController or where ever you want to initialize payments:
 
-```
+```swift
 func showPaymentCheckout(){
-    objPaykun.checkout(withCustomerName:“name”, customerEmail:“email”, customerMobile:“mobile”, productName:“product”, orderNo:“order”, amount:“amount”, viewController:self);
+    objPaykun.checkout(withCustomerName: “name”, customerEmail: “email”, customerMobile: “mobile”, productName: “product”, orderNo: “order”, amount: “amount”, viewController: self);
 }
 ```
 
 ### Step 5: Handle Success and Fail Event
 
 Success
-```
+```swift
 func onPaymentSucceed(_ responce: [AnyHashable : Any]) {
     print("responce: \(responce)")
 }
 ```
 
 Fail
-```
+```swift
 func onPaymentFailed(_ responce: [AnyHashable : Any]) {
     print("responce: \(responce)")
 }
@@ -83,7 +85,7 @@ func onPaymentFailed(_ responce: [AnyHashable : Any]) {
 
 ### Get Transaction Details
 
-```
+```swift
 objPaykun.getTransactionByPaymentId("PaymentId", block: { responce in
     print("responce: \(responce)")
 })
