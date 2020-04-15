@@ -22,7 +22,7 @@ class ViewController: UIViewController,PaykunCheckoutDelegate {
         }
     
         // open checkout method
-        objPaykun.checkout(withCustomerName:"Paul", customerEmail:"example@mail.com", customerMobile:"", productName:"Stationery", orderNo:orderId, amount: "10", viewController:self)
+        objPaykun.checkout(withCustomerName: "Paul", customerEmail: "example@mail.com", customerMobile: "1234567890", productName: "Stationery", orderNo: orderId, amount: "10", currency: "INR", viewController: self)
     }
     
     // MARK: PaykunCheckoutDelegate

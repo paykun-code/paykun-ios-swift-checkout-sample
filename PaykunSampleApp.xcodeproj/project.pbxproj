@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		010FAA8C2323C11B00AEEA51 /* PayKun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010FAA8A2323C11400AEEA51 /* PayKun.framework */; };
-		010FAA8D2323C11B00AEEA51 /* PayKun.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 010FAA8A2323C11400AEEA51 /* PayKun.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		015850C924472BDD0076109A /* PayKun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015850C724472AC30076109A /* PayKun.framework */; };
+		015850CA24472BDD0076109A /* PayKun.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 015850C724472AC30076109A /* PayKun.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0177EE9B217DE4C0007BF559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0177EE9A217DE4C0007BF559 /* AppDelegate.swift */; };
 		0177EE9D217DE4C0007BF559 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0177EE9C217DE4C0007BF559 /* ViewController.swift */; };
 		0177EEA0217DE4C0007BF559 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0177EE9E217DE4C0007BF559 /* Main.storyboard */; };
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				010FAA8D2323C11B00AEEA51 /* PayKun.framework in Embed Frameworks */,
+				015850CA24472BDD0076109A /* PayKun.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		010FAA8A2323C11400AEEA51 /* PayKun.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayKun.framework; sourceTree = "<group>"; };
+		015850C724472AC30076109A /* PayKun.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayKun.framework; sourceTree = "<group>"; };
 		0177EE97217DE4C0007BF559 /* PaykunSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaykunSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0177EE9A217DE4C0007BF559 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0177EE9C217DE4C0007BF559 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				010FAA8C2323C11B00AEEA51 /* PayKun.framework in Frameworks */,
+				015850C924472BDD0076109A /* PayKun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 		0177EE99217DE4C0007BF559 /* PaykunSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				010FAA8A2323C11400AEEA51 /* PayKun.framework */,
+				015850C724472AC30076109A /* PayKun.framework */,
 				01E55269224CD2E80099B5B3 /* LICENSE */,
 				01E5526A224CD2E80099B5B3 /* README.md */,
 				0177EE9A217DE4C0007BF559 /* AppDelegate.swift */,
@@ -324,6 +324,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paykun.PaykunSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -349,6 +350,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paykun.PaykunSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
